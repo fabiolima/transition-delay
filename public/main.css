@@ -1,0 +1,92 @@
+@import url(/node_modules/normalize.css/normalize.css);
+section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -3; }
+  section:nth-of-type(1) {
+    background-color: #48A9A6; }
+
+.circular-menu {
+  width: 70px;
+  height: 70px; }
+  .circular-menu .label {
+    width: 70px;
+    height: 70px;
+    background-color: #4357AD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    color: #E4DFDA;
+    font-size: 1.5em;
+    z-index: 1;
+    transition: font-size 100ms linear; }
+    .circular-menu .label:active {
+      font-size: 1.7em; }
+  .circular-menu [type="checkbox"] {
+    position: absolute;
+    visibility: hidden; }
+  .circular-menu [type="checkbox"]:checked ~ .items {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    transition-delay: 200ms; }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(1) {
+      opacity: 1;
+      transition-delay: calc(200ms + 1 * 50ms);
+      transform: rotate(calc(1 * 72deg)) translate(70px) rotate(calc(1 * -1 * 72deg)); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(2) {
+      opacity: 1;
+      transition-delay: calc(200ms + 2 * 50ms);
+      transform: rotate(calc(2 * 72deg)) translate(70px) rotate(calc(2 * -1 * 72deg)); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(3) {
+      opacity: 1;
+      transition-delay: calc(200ms + 3 * 50ms);
+      transform: rotate(calc(3 * 72deg)) translate(70px) rotate(calc(3 * -1 * 72deg)); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(4) {
+      opacity: 1;
+      transition-delay: calc(200ms + 4 * 50ms);
+      transform: rotate(calc(4 * 72deg)) translate(70px) rotate(calc(4 * -1 * 72deg)); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(5) {
+      opacity: 1;
+      transition-delay: calc(200ms + 5 * 50ms);
+      transform: rotate(calc(5 * 72deg)) translate(70px) rotate(calc(5 * -1 * 72deg)); }
+  .circular-menu .items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 200ms ease;
+    background-color: #ecd4ad;
+    transition-delay: 200ms; }
+    .circular-menu .items .item {
+      font-size: 1.5em;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #2D3142;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -15px;
+      margin-left: -15px;
+      transition: transform 200ms ease, opacity 500ms ease;
+      opacity: 0; }
