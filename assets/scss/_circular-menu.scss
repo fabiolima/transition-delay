@@ -1,0 +1,125 @@
+.circular-menu {
+  $items: 6;
+  $angleBetween: 360deg / $items;
+
+  width: 70px;
+  height: 70px;
+  
+
+  .label {
+    width: 70px;
+    height: 70px;
+    background-color: #4357AD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    color: #E4DFDA;
+    font-size: 1.5em;
+    z-index: 1;
+    transition: font-size 100ms linear;
+
+    &:active {
+      font-size: 1.7em;
+    }
+  }
+
+  [type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  [type="checkbox"]:checked {
+  
+    & ~ .items {
+      .item {
+        opacity: 1;
+        transition: transform 200ms ease;
+
+        @for $i from 1 through $items {
+          &:nth-of-type(#{$i}) {
+            transition: transform 200ms ease;
+            transition-delay: calc(#{$i} * 50ms);
+            transform:
+              rotate(calc(#{$i} * #{$angleBetween}))
+              translate(80px)
+              rotate(calc(#{$i} * -1 * #{$angleBetween}))
+              scale(1);
+          }
+        }
+      }
+
+      // display: block;
+      // width: 200px;
+      // height: 200px;
+      // margin-top: -100px;
+      // margin-left: -100px;
+      transition: all 200ms ease;
+
+      
+    }
+  }
+
+
+
+  .items {
+    // list-style: none;
+    // margin: 0;
+    // padding: 0;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // margin-top: -25px;
+    // margin-left: -25px;
+    // width: 50px;
+    // height: 50px;
+    // border-radius: 50%;
+    // transform: scale(1);
+    // transition: all 200ms ease;
+    // background-color: #ecd4ad;
+    // transition-delay: 300ms;
+
+    .item {
+      font-size: 1.5em;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #2D3142;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -25px;
+      background-color: #4357AD;
+      border-radius: 50%;
+      color: #E4DFDA;
+      cursor: pointer;
+
+      transition: transform 200ms ease;
+
+      @for $i from 1 through $items {
+        &:nth-of-type(#{$i}) {
+          // transition-delay: calc(#{$i} * 50ms);
+
+          transform:
+            rotate(calc(#{$i} * #{$angleBetween}))
+            translate(80px)
+            rotate(calc(#{$i} * -1 * #{$angleBetween}))
+            scale(0);
+        }
+      }
+
+      &:active, &:hover {
+        width: 54px;
+        height: 54px;
+        margin-top: -27px;
+        margin-left: -27px;
+        font-size: 1.6em;
+      }
+    }
+  }
+}

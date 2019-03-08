@@ -1,18 +1,24 @@
 section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -3;
+    position: relative;
 
     &:nth-of-type(1) {
         background-color: #48A9A6;
+        background: linear-gradient(to right, #48A9A6, #96deda);
     }
 
-    &:nth-child(1) {
-        
+    &:nth-child(2) {
+        background-color: #D1C8E1;
+
+        background: #D66D75;  /* fallback for old browsers */
+        // background: -webkit-linear-gradient(to right, #E29587, #D66D75);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #DA9095, #D1C8E1);
+
     }
 
     &:nth-child(1) {
