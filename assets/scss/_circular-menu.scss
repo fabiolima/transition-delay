@@ -1,4 +1,5 @@
 .circular-menu {
+  position: relative;
   $items: 6;
   $angleBetween: 360deg / $items;
 

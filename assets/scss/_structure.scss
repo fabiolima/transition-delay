@@ -3,11 +3,11 @@ section {
     width: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
     position: relative;
 
     &:nth-of-type(1) {
+        align-items: center;
         background-color: #48A9A6;
         background: linear-gradient(to right, #48A9A6, #96deda);
     }
