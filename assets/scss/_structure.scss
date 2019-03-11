@@ -15,13 +15,8 @@ section {
     &:nth-child(2) {
         background-color: #D1C8E1;
 
-        background: #D66D75;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #E29587, #D66D75);  /* Chrome 10-25, Safari 5.1-6 */
+        background: #D66D75;
         background: linear-gradient(to right, #DA9095, #D1C8E1);
 
-    }
-
-    &:nth-child(1) {
-        
     }
 }

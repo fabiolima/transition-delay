@@ -13,7 +13,6 @@ section {
   section:nth-child(2) {
     background-color: #D1C8E1;
     background: #D66D75;
-    /* fallback for old browsers */
     background: linear-gradient(to right, #DA9095, #D1C8E1); }
 
 .circular-menu {
@@ -38,35 +37,33 @@ section {
   .circular-menu [type="checkbox"] {
     position: absolute;
     visibility: hidden; }
-  .circular-menu [type="checkbox"]:checked ~ .items {
-    transition: all 200ms ease; }
-    .circular-menu [type="checkbox"]:checked ~ .items .item {
-      opacity: 1;
-      transition: transform 200ms ease; }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(1) {
-        transition: transform 200ms ease;
-        transition-delay: calc(1 * 50ms);
-        transform: rotate(calc(1 * 60deg)) translate(80px) rotate(calc(1 * -1 * 60deg)) scale(1); }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(2) {
-        transition: transform 200ms ease;
-        transition-delay: calc(2 * 50ms);
-        transform: rotate(calc(2 * 60deg)) translate(80px) rotate(calc(2 * -1 * 60deg)) scale(1); }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(3) {
-        transition: transform 200ms ease;
-        transition-delay: calc(3 * 50ms);
-        transform: rotate(calc(3 * 60deg)) translate(80px) rotate(calc(3 * -1 * 60deg)) scale(1); }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(4) {
-        transition: transform 200ms ease;
-        transition-delay: calc(4 * 50ms);
-        transform: rotate(calc(4 * 60deg)) translate(80px) rotate(calc(4 * -1 * 60deg)) scale(1); }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(5) {
-        transition: transform 200ms ease;
-        transition-delay: calc(5 * 50ms);
-        transform: rotate(calc(5 * 60deg)) translate(80px) rotate(calc(5 * -1 * 60deg)) scale(1); }
-      .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(6) {
-        transition: transform 200ms ease;
-        transition-delay: calc(6 * 50ms);
-        transform: rotate(calc(6 * 60deg)) translate(80px) rotate(calc(6 * -1 * 60deg)) scale(1); }
+  .circular-menu [type="checkbox"]:checked ~ .items .item {
+    opacity: 1;
+    transition: transform 200ms ease; }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(1) {
+      transition: transform 200ms ease;
+      transition-delay: calc(1 * 50ms);
+      transform: rotate(calc(1 * 60deg)) translate(80px) rotate(calc(1 * -1 * 60deg)) scale(1); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(2) {
+      transition: transform 200ms ease;
+      transition-delay: calc(2 * 50ms);
+      transform: rotate(calc(2 * 60deg)) translate(80px) rotate(calc(2 * -1 * 60deg)) scale(1); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(3) {
+      transition: transform 200ms ease;
+      transition-delay: calc(3 * 50ms);
+      transform: rotate(calc(3 * 60deg)) translate(80px) rotate(calc(3 * -1 * 60deg)) scale(1); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(4) {
+      transition: transform 200ms ease;
+      transition-delay: calc(4 * 50ms);
+      transform: rotate(calc(4 * 60deg)) translate(80px) rotate(calc(4 * -1 * 60deg)) scale(1); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(5) {
+      transition: transform 200ms ease;
+      transition-delay: calc(5 * 50ms);
+      transform: rotate(calc(5 * 60deg)) translate(80px) rotate(calc(5 * -1 * 60deg)) scale(1); }
+    .circular-menu [type="checkbox"]:checked ~ .items .item:nth-of-type(6) {
+      transition: transform 200ms ease;
+      transition-delay: calc(6 * 50ms);
+      transform: rotate(calc(6 * 60deg)) translate(80px) rotate(calc(6 * -1 * 60deg)) scale(1); }
   .circular-menu .items .item {
     font-size: 1.5em;
     width: 50px;

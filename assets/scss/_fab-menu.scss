@@ -2,11 +2,9 @@
   $items: 5;
   $angleBetween: 180deg / $items;
 
-
   width: 70px;
   height: 70px;
   
-
   .label {
     width: 70px;
     height: 70px;
@@ -42,9 +40,7 @@
             opacity: 1;
             transition-delay: calc(#{$i} * 50ms);
             transform: 
-            // rotate(calc(#{$i} * #{$angleBetween}))
             translateY(calc(70px * #{$i}));
-            // rotate(calc(#{$i} * -1 * #{$angleBetween}));
           }
         }
       }  
